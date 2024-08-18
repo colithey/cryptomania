@@ -1,0 +1,70 @@
+.header {
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 9999;
+    height: 90px;
+    padding: 20px 0;
+    margin-bottom: 60px;
+    border-bottom: 1px solid black;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo_box {
+    max-width: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.logo_img {
+    cursor: pointer;
+    max-width: 60px;
+    margin: 0 auto;
+    animation: spin 4s linear infinite;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.logo_text {
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.logo_text::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    transition: transform 0.3s;
+}
+
+.logo_text:hover::after {
+    transform: scaleX(1);
+}
+
+.logo_text:hover {
+    color: #555;
+    transform: scale(1.05);
+}

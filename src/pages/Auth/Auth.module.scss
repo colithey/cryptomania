@@ -1,0 +1,108 @@
+/* Auth.module.scss */
+
+.auth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    padding: 20px;
+    background: #f9f9f9; /* Яркий фон */
+  }
+  
+  .formikForm {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    transform: perspective(1000px) rotateX(10deg);
+    animation: fadeIn 1s ease-in-out; /* Анимация при загрузке */
+  }
+  
+  .field {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    margin-bottom: 15px;
+  }
+  
+  .field:focus {
+    border-color: #555;
+    box-shadow: 0 0 8px rgba(5, 5, 5, 0.5);
+    outline: none;
+    transform: scale(1.05); /* Увеличение при фокусе */
+  }
+  
+  .error {
+    color: red;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    opacity: 0;
+    animation: fadeInError 0.5s forwards; /* Анимация появления ошибки */
+  }
+  
+  .button {
+    font-family: inherit;
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+    transform: perspective(1000px) rotateX(0deg);
+  }
+  
+  .button:hover {
+    background-color: #555;
+    transform: perspective(1000px) rotateX(5deg) scale(1.05); /* Увеличение и вращение при наведении */
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    font-weight: 700;
+    animation: slideInDown 0.5s ease-in-out; /* Анимация заголовка */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: perspective(1000px) rotateX(-10deg);
+    }
+    to {
+      opacity: 1;
+      transform: perspective(1000px) rotateX(10deg);
+    }
+  }
+  
+  @keyframes fadeInError {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

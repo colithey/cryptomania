@@ -1,0 +1,153 @@
+.coin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+    animation: fadeIn 1s ease-out;
+  }
+  
+  .coin_name {
+    text-align: center;
+    margin-bottom: 20px;
+    animation: bounceIn 1s ease;
+  }
+  
+  .coin_name img {
+    max-width: 150px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    animation: zoomIn 1s ease;
+  }
+  
+  .coin_name p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .coin_info {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .coin_info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .coin_info li {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+    transition: color 0.3s ease;
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .coin_info li:hover {
+    color: #007bff;
+  }
+  
+  .coin_chart {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideInUp 1s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bounceIn {
+    from {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+.spinner {
+    display: grid;
+    place-self: center;
+    min-height: 80vh;
+}
+.spin {
+    width: 65px;
+    height: 65px;
+    place-self: center;
+    border: 5px solid #bdbdbd;
+    border-top-color: #4500c6;
+    border-radius: 50%;
+    animation: rotate 2s infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
